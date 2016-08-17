@@ -1,0 +1,43 @@
+
+#tipsImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+body {
+    font-family:fantasy;
+}
+
+div {
+    margin-top:10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 75%
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+.inputColumn {
+    width: 100px;
+}
+
+.inputBox {
+    width:250px;
+}
+
+.requiredFields {
+    color: lightgray;
+    font-size: small;
+}
+
+#errorText {
+    float:left;
+    color:red;
+}
