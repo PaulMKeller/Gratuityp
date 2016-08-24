@@ -37,3 +37,7 @@ h1 {
     float:left;
     color:red;
 }
+
+table, th, td {
+    border: 1px solid black;
+}
