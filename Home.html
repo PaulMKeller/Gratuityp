@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.city {display:none;}
+</style>
+<body class="w3-container">
+
+<h2>Gratuityp</h2>
+
+<ul class="w3-navbar w3-black">
+  <li><a href="#" class="tablink" onclick="openCity(event, 'Connect');">Connect</a></li>
+  <li><a href="#" class="tablink" onclick="openCity(event, 'London');">News Feed</a></li>
+  <li><a href="#" class="tablink" onclick="openCity(event, 'Paris');">Rewards</a></li>
+  <li><a href="#" class="tablink" onclick="openCity(event, 'Tokyo');">Referrals</a></li>
+  <li><a href="#" class="tablink" onclick="openCity(event, 'Tips');">Tips</a></li>
+  <li><a href="#" class="tablink" onclick="openCity(event, 'Network');">Your Network</a></li>
+</ul>
+
+<div id="Connect" class="w3-container w3-border city">
+  <h2>Connect</h2>
+  <p>The current sign up page will go here.</p>
+</div>
+    
+<div id="London" class="w3-container w3-border city">
+  <h2>News Feed</h2>
+  <p>Your news feed will go here.</p>
+</div>
+
+<div id="Paris" class="w3-container w3-border city">
+  <h2>Rewards</h2>
+  <p>Details of your rewards and badges earned will go here.</p>
+</div>
+
+<div id="Tokyo" class="w3-container w3-border city">
+  <h2>Referrals</h2>
+  <p>You will be able to refer colleagues and friends here and earn points/bonuses if they sign up.</p>
+</div>
+    
+<div id="Tips" class="w3-container w3-border city">
+  <h2>Tips</h2>
+  <p>Your connections will be able make tip payments to you and details of those tips and ratings will be shown here.</p>
+</div>
+    
+<div id="Network" class="w3-container w3-border city">
+  <h2>Your Network</h2>
+  <p>Details of your connections and profile settings will go here.</p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+
+</body>
+</html>
