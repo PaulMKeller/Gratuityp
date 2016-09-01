@@ -1,4 +1,3 @@
-
 #tipsImage {
     display: block;
     margin-left: auto;
@@ -6,11 +5,11 @@
 }
 
 body {
-    font-family:fantasy;
+    font-family: fantasy;
 }
 
 div {
-    margin-top:10px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
     width: 75%
@@ -21,7 +20,7 @@ div {
 }
 
 .inputBox {
-    width:250px;
+    width: 250px;
 }
 
 .requiredFields {
@@ -30,21 +29,22 @@ div {
 }
 
 #errorText {
-    float:left;
-    color:red;
+    float: left;
+    color: red;
 }
 
+
+/*
 table, th, td {
     border: 1px solid black;
 }
-
+*/
 
 #bodyHome {
     background-image: url("../images/Tips_Jar.jpg");
-    left:0;
-    top:0;
-    width:100%;
-    height:100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
     opacity: 0.4;
-    
 }
