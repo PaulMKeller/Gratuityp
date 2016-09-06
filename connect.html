@@ -1,0 +1,74 @@
+<html>
+
+<head>
+    <title>Gratuityp.com</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <img id="tipsImage" src="../images/Tips_Jar.jpg" />
+    <h1>
+        Welcome to Gratuityp.com!
+    </h1>
+    <div class="mainText">
+        We are designing a new social networking app aimed at the service industry.
+    </div>
+    <div class="mainText">
+        Would you like to connect with your customers, build a following, and show your boss just how important you are to the company?
+    </div>
+    <div class="mainText">
+        Connect with us below and we'll contact you when the app is ready.
+    </div>
+    <div class="mainText">
+        It might just change your life!
+    </div>
+    <div class="mainText">
+        <span class="requiredFields">* All fields are required</span>
+        <form action="http://www.gratuityp.com/php/register.php" method="post">
+            <table>
+                <tr>
+                    <td>
+                        Email Address:
+                    </td>
+                    <td>
+                        <input class="inputBox" type="email" name="email" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        First Name:
+                    </td>
+                    <td>
+                        <input class="inputBox" type="text" name="firstname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Last Name:
+                    </td>
+                    <td>
+                        <input class="inputBox" type="text" name="lastname" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Country:
+                    </td>
+                    <td>
+                        <input class="inputBox" type="text" name="country" required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td>
+                        <input type="submit" name="submit" value="Submit" style="float: right;">
+                    </td>
+                </tr>
+            </table>
+            <div id="errorText"></div>
+        </form>
+    </div>
+</body>
+
+</html>
