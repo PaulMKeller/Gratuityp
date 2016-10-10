@@ -8,6 +8,7 @@
         <?php
         
         $errorsHaveOccured = FALSE;
+        $websiteSubmission = FALSE;
         $emailErr = $firstnameErr = $lastnameErr = $countryErr = "";
         $email = $firstname = $lastname = $country = "";
         
@@ -16,11 +17,14 @@
         echo "<img id=\"tipsImage\" src=\"../images/Tips_Jar.jpg\" />";
         
         if ($errorsHaveOccured) {
+            if ($websiteSubmission==FALSE) {
+                echo "RETURNCODE=ERROR"
+            }
             echo "<h1>Thanks for trying to connect with Gratuityp.com</h1>";
             echo "<h3>Unfortunately your registration has Errors.</h3>";
             echo "Click back in your browser and correct the following errors:";
             echo "<br />";
-            echo formatErrors();
+            echo formatErrors();   
         } else {
             $serverName = "db638520808.db.1and1.com"; //serverName\instanceName
             $connectionInfo = array( "Database"=>"db638520808", "UID"=>"dbo638520808", "PWD"=>"Register2016!");
@@ -41,8 +45,10 @@
                 die( print_r( sqlsrv_errors(), true));
             }
 
+            if ($websiteSubmission==FALSE) {
+                echo "RETURNCODE=SUBMITTED"
+            }
             echo "<h1>Thanks for registering your interest, we will contact you soon</h1>";
-            //echo "<a href='http://www.gratuityp.com'>Back to Gratuityp.com</a>"; 
         }
 
         function clean_input($data) {
@@ -53,9 +59,15 @@
         }
         
         function validate_input() {
-            global $email, $emailErr, $firstname, $firstnameErr, $lastname, $lastnameErr, $country, $countryErr, $errorsHaveOccured;
+            global $email, $emailErr, $firstname, $firstnameErr, $lastname, $lastnameErr, $country, $countryErr, $errorsHaveOccured, $websiteSubmission;
             
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                if (empty($_POST['websiteSubmission'])) {
+                    $websiteSubmission = FALSE;
+                } else {
+                    $websiteSubmission = $_POST['websiteSubmission'];
+                }
+                
                 if (empty($_POST['email'])) {
                     $emailErr = "Email is Required.";
                 } else {
